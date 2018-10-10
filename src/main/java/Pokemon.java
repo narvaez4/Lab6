@@ -12,7 +12,7 @@
  * </ul>
  * <p>
  * Have a look through the Pokemon file to see how we can construct objects, can use member
- * variables of these objects, and use objects of the same type to make our game.
+ * variables of these objects, and use obj ects of the same type to make our game.
  */
 public class Pokemon {
 

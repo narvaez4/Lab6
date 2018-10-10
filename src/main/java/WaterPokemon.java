@@ -61,8 +61,15 @@ public class WaterPokemon extends Pokemon {
      * Implement this.
      */
     public boolean attack(final Pokemon opponent) {
+        if(getHitPoints()< 0) {
+            System.out.println("Sorry your opponent is already dead.");
+        }
+        if(opponent.equals(WaterPokemon)){
+            System.out.println("Sorry the oponent mustn't be a Water Pokemon");
+            }
         return false;
     }
+}
 
 
 
