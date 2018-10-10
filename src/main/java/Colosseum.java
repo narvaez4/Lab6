@@ -153,13 +153,83 @@ public class Colosseum {
         System.out.println("Player 1, build your Pokemon!");
         System.out.println("=================");
         firstPokemon = buildPokemon();
+        Scanner myScan = new Scanner(System.in);
+
+        System.out.println("Please name your pokemon");
+        String name = myScan.nextLine();
+        System.out.println("How many hit points will it have? (1-50)");
+        int hitpoints = myScan.nextInt();
+
+        while(hitpoints > MAX_HIT_POINTS || hitpoints <1) {
+            if (hitpoints > MAX_HIT_POINTS || hitpoints <1 ) {
+                System.out.println("Sorry. Hit points must be between 1 and 50");
+                hitpoints = myScan.nextInt();
+            }
+        }
+
+        System.out.println("Split your points between attack level and defense level");
+        int maxAttack = hitpoints -1 ;
+        System.out.println("Enter your attack level (1-" + maxAttack + "):");
+        int attack= myScan.nextInt();
+        while(attack > maxAttack || attack < 1) {
+            if (attack > maxAttack || attack < 1) {
+                System.out.println("Sorry. The attack level must be between 1 and" + hitpoints + ".");
+                attack = myScan.nextInt();
+            }
+        }
+        System.out.println(" Enter your defense level (1-" + (hitpoints - attack) + ")");
+        int maxDefense = hitpoints - attack;
+        int defense = myScan.nextInt();
+        while(defense > maxDefense || defense < 1) {
+            if (defense > maxDefense || defense <1) {
+                System.out.println("Sorry. The defense level must be between 1 and" + maxDefense + ".");
+                defense = myScan.nextInt();
+            }
+        }
+
+
 
         System.out.println("");
 
         System.out.println("Player 2, build your Pokemon!");
         System.out.println("==================");
         secondPokemon = buildPokemon();
+        Scanner myScan = new Scanner(System.in);
+
+        System.out.println("Please name your pokemon");
+        String name = myScan.nextLine();
+        System.out.println("How many hit points will it have? (1-50)");
+        int hitpoints = myScan.nextInt();
+
+        while(hitpoints > MAX_HIT_POINTS || hitpoints <1) {
+            if (hitpoints > MAX_HIT_POINTS || hitpoints <1 ) {
+                System.out.println("Sorry. Hit points must be between 1 and 50");
+                hitpoints = myScan.nextInt();
+            }
+        }
+
+        System.out.println("Split your points between attack level and defense level");
+        int maxAttack = hitpoints -1 ;
+        System.out.println("Enter your attack level (1-" + maxAttack + "):");
+        int attack= myScan.nextInt();
+        while(attack > maxAttack || attack < 1) {
+            if (attack > maxAttack || attack < 1) {
+                System.out.println("Sorry. The attack level must be between 1 and" + hitpoints + ".");
+                attack = myScan.nextInt();
+            }
+        }
+        System.out.println(" Enter your defense level (1-" + (hitpoints - attack) + ")");
+        int maxDefense = hitpoints - attack;
+        int defense = myScan.nextInt();
+        while(defense > maxDefense || defense < 1) {
+            if (defense > maxDefense || defense <1) {
+                System.out.println("Sorry. The defense level must be between 1 and" + maxDefense + ".");
+                defense = myScan.nextInt();
+            }
+        }
+
     }
+
 
     /**
      * Determines the order of which Pokemon will go first.

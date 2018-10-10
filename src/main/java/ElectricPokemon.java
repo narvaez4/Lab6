@@ -62,8 +62,4 @@ public class ElectricPokemon extends Pokemon {
         return false;
     }
 
-    @Override
-    public int getHitPoints() {
-        return super.getHitPoints();
-    }
 }
